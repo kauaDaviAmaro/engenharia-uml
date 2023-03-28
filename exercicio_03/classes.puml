@@ -1,7 +1,44 @@
-@startuml classe
+@startuml dclass
+title Diagrama do programa imc
+
+object lerPessoa {
+  __call__(): Pessoa
+}
+object calcularIMC{
+  __call__(Pessoa): None
+}
+object situacaoIMC{
+    __call__(Pessoa): None
+}
+
 class Pessoa {
   nome: str
   peso: float
   altura: float
 }
-@end
+
+object pessoaA{
+  nome = 'Fulano'
+  idade = 32
+}
+
+object pessoaB{
+  nome = 'Ciclano'
+  idade = 24
+}
+
+object pessoaC{
+  nome = 'Betrano'
+  idade = 22
+}
+
+
+
+lerPessoa --> Pessoa
+situacaoIMC --> Pessoa
+calcularIMC --> Pessoa
+
+Pessoa <-- pessoaA
+Pessoa <-- pessoaB
+Pessoa <-- pessoaC
+@enduml
