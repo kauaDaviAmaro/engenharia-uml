@@ -1,0 +1,7 @@
+@startuml classe
+class Pessoa {
+  nome: str
+  peso: float
+  altura: float
+}
+@end

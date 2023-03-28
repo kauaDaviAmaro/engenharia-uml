@@ -1,0 +1,16 @@
+@startuml diagrama_casoDeUso
+
+actor Usuario
+
+rectangle Programa {
+  usecase "Ler Sócios"
+  usecase "Calcular Porcentagens"
+  usecase "Exibir os Resultados"
+  usecase "Encerrar sistema"
+}
+
+Usuario --> (Ler Sócios)
+(Ler Sócios) --> (Calcular Porcentagens)
+(Calcular Porcentagens) --> (Exibir os Resultados)
+(Exibir os Resultados) --> (Encerrar sistema)
+@enduml

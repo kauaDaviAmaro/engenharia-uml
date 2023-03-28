@@ -1,0 +1,20 @@
+@startuml diagrama_casoDeUso
+title Programa
+
+
+actor Usuário
+
+rectangle Programa {
+  usecase "Ler dados do aluno"
+  usecase "Calcular média do aluno"
+  usecase "Verificar situação do aluno"
+  usecase "Exibir se o aluno foi reprovado"
+  usecase "Encerrar sistema"
+}
+
+Usuário --> (Ler dados do aluno)
+(Ler dados do aluno) --> (Calcular média do aluno)
+(Calcular média do aluno) --> (Verificar situação do aluno)
+(Verificar situação do aluno) --> (Exibir se o aluno foi reprovado)
+(Exibir se o aluno foi reprovado) --> (Encerrar sistema)
+@enduml

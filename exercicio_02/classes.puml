@@ -1,0 +1,10 @@
+@startuml classe
+class Aluno {
+  nome: str
+  nota1: float
+  nota2: float
+  nota3: float
+  nota4: float
+  media: float
+}
+@end

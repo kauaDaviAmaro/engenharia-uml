@@ -1,0 +1,34 @@
+@startuml diagrama_atividade
+
+title Diagrama de Atividades do IMC
+
+start
+
+: Criar a classe "Pessoa" com os atributos "nome", "peso" e "altura";
+: Criar função "lerPessoa" para ler os dados de uma pessoa e retornar um objeto do tipo "Pessoa";
+
+repeat
+  : Ler dados de uma pessoa;
+  : Armazenar a pessoa em uma variável;
+  : Utilizar a função "calcularIMC" para calcular o IMC da pessoa;
+  : Utilizar a função "verificarSituacao" para verificar a situação do IMC;
+
+backward:Leia a próxima pessoa;
+repeat while (Todas as três pessoas foram lidas?)
+
+: Criar função "calcularIMC" para calcular o IMC de uma pessoa;
+: Calcular o IMC da pessoa a partir do peso e altura;
+: Armazenar o IMC no objeto "Pessoa";
+: Retornar o objeto "Pessoa" atualizado;
+
+: Criar função "verificarSituacao" para verificar a situação do IMC de uma pessoa;
+: Verificar se o IMC da pessoa é menor que 18.5 ou maior que 25;
+if (IMC fora do normal?) then (Sim)
+  : Mostrar o nome da pessoa e que o IMC está fora do normal;
+else (Não)
+  : Não mostrar nada;
+endif
+
+stop
+
+@enduml
