@@ -1,0 +1,6 @@
+@startuml Socios
+Class Socios {
+   nome: str
+   porcentagem: float
+}
+@enduml

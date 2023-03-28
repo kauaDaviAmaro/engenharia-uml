@@ -1,0 +1,30 @@
+@startuml digrama_socio
+title Diagrama de Atividades do Socio
+
+start
+
+: Criar a classe "Aluno" com os atributos "nome" e "notas";
+: Criar função "lerAlunos" para ler os dados de um aluno e retornar um objeto do tipo "Aluno";
+repeat
+  : Ler dados de um aluno;
+  : Armazenar o aluno em uma variável;
+  : Utilizar a função "calcularMedia" para calcular a média do aluno;
+  : Utilizar a função "verificarSituacao" para verificar a situação do aluno;
+
+backward:Leia o proximo aluno;
+repeat while (Todos os três alunos foram lidos?)
+
+: Criar função "calcularMedia" para calcular a média de um aluno;
+: Calcular a média do aluno a partir das notas;
+: Armazenar a média no objeto "Aluno";
+: Retornar o objeto "Aluno" atualizado;
+
+: Criar função "verificarSituacao" para verificar a situação de um aluno;
+: Verificar se a média do aluno é menor que 7;
+if (Média < 7?) then (Sim)
+  : Mostrar o nome do aluno e que ele está reprovado;
+else (Não)
+  : Não mostrar nada;
+endif
+stop
+@enduml
