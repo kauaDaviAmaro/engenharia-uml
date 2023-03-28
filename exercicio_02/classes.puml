@@ -7,4 +7,48 @@ class Aluno {
   nota4: float
   media: float
 }
+
+object lerAlunos{
+  __call__(): Aluno
+}
+
+object calcularMedia{
+  __call__(Aluno): None
+}
+
+object situacaoAluno{
+  __call__(Aluno): None
+}
+
+object alunoA{
+  nome = 'fulano'
+  nota1 = 10
+  nota2 = 6
+  nota3 = 7
+  nota4 = 8
+}
+
+object alunoB{
+  nome = 'Ciclano'
+  nota1 = 10
+  nota2 = 7
+  nota3 = 2
+  nota4 = 9
+}
+
+object alunoC{
+  nome = 'Betrano'
+  nota1 = 5
+  nota2 = 3
+  nota3 = 6
+  nota4 = 1
+}
+
+lerAlunos --> Aluno
+calcularMedia --> Aluno
+situacaoAluno --> Aluno
+
+Aluno <-- alunoA
+Aluno <-- alunoB
+Aluno <-- alunoC
 @end

@@ -3,4 +3,35 @@ Class Socios {
    nome: str
    porcentagem: float
 }
+
+object lerSocio{
+   __Call__(): Socios
+}
+
+object porcentagemSocio{
+   __Call__(Socios): None
+}
+
+object socioA{
+   nome = 'fulano'
+   porcentagem = 10
+}
+
+object socioB{
+   nome = 'ciclano'
+   porcentagem = 20
+}
+
+object socioC{
+   nome = 'betrano'
+   porcentagem = 70
+}
+
+lerSocio --> Socios
+porcentagemSocio --> Socios
+
+Socios <-- socioA
+Socios <-- socioB
+Socios <-- socioC
+
 @enduml
