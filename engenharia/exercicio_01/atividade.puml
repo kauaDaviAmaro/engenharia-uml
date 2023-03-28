@@ -1,0 +1,9 @@
+@startuml digrama_atividade
+(*) --> "Crie a classe Socio que contenha o nome e porcentagem"
+--> "Crie uma função para ler socio com base na entrada do usuario"
+--> "Crie uma função para calcular a porcentagem do socio"
+--> "Armezene 3 socios em variaveis usando a função de ler socio"
+--> "Utilize a função de cálculo de porcentagem"
+--> "Mostre os valores das porcentagens de cada socio para o usuario"
+--> (*)
+@enduml

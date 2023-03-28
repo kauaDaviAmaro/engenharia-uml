@@ -1,0 +1,16 @@
+@startuml diagrama_casoDeUso
+left to right direction
+skinparam packageStyle rectangle
+
+actor Usuario
+
+rectangle Programa {
+  usecase "Ler Sócios"
+  usecase "Calcular Porcentagens"
+  usecase "Exibir os Resultados"
+}
+
+Usuario --> (Ler Sócios)
+(Ler Sócios) --> (Calcular Porcentagens)
+(Calcular Porcentagens) --> (Exibir os Resultados)
+@enduml
